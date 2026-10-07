@@ -1,6 +1,8 @@
 export function renderErrorPage(): string {
+  const homeHref = import.meta.env.BASE_URL;
+
   return `<!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="utf-8" />
     <title>This page didn't load</title>
@@ -22,7 +24,7 @@ export function renderErrorPage(): string {
       <p>Something went wrong on our end. You can try refreshing or head back home.</p>
       <div class="actions">
         <button class="primary" onclick="location.reload()">Try again</button>
-        <a class="secondary" href="/">Go home</a>
+        <a class="secondary" href="${homeHref}">Go home</a>
       </div>
     </div>
   </body>
